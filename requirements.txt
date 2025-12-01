@@ -6,3 +6,7 @@ nltk
 wordcloud
 tensorflow
 scikit-learn
+joblib
+lime
+python-dotenv
+openai
