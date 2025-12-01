@@ -83,3 +83,11 @@ svm_classifier = SVC(kernel="linear", C=1.0, random_state=42)
 svm_classifier.fit(train_X_vectors, train_Y)
 predictions = svm_classifier.predict(test_X_vectors)
 print(classification_report(test_Y, predictions))
+
+# Save the model and vectorizer
+if not os.path.exists("models"):
+    os.makedirs("models")
+joblib.dump(svm_classifier, "models/svm_model.pkl")
+joblib.dump(vectorizer, "models/svm_vectorizer.pkl")
+print("Model saved to models/svm_model.pkl")
+print("Vectorizer saved to models/svm_vectorizer.pkl")

@@ -83,3 +83,11 @@ rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_classifier.fit(train_X_vectors, train_Y)
 predictions = rf_classifier.predict(test_X_vectors)
 print(classification_report(test_Y, predictions))
+
+# Save the model and vectorizer
+if not os.path.exists("models"):
+    os.makedirs("models")
+joblib.dump(rf_classifier, "models/random_forest_model.pkl")
+joblib.dump(vectorizer, "models/random_forest_vectorizer.pkl")
+print("Model saved to models/random_forest_model.pkl")
+print("Vectorizer saved to models/random_forest_vectorizer.pkl")

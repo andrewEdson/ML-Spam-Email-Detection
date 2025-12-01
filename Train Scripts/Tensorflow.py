@@ -157,3 +157,15 @@ plt.ylabel("Accuracy")
 plt.xlabel("Epoch")
 plt.legend()
 plt.show()
+
+# Save the model and tokenizer
+import os
+import pickle
+
+if not os.path.exists("models"):
+    os.makedirs("models")
+model.save("models/tensorflow_model.h5")
+with open("models/tensorflow_tokenizer.pkl", "wb") as f:
+    pickle.dump(tokenizer, f)
+print("Model saved to models/tensorflow_model.h5")
+print("Tokenizer saved to models/tensorflow_tokenizer.pkl")
