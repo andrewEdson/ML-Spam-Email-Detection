@@ -10,6 +10,8 @@ from sklearn.metrics import classification_report
 import joblib
 import seaborn as sns
 from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
 
 data = pd.read_csv("Data/spam_ham_dataset.csv")
 data.head()

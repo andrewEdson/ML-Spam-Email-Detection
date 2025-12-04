@@ -2,6 +2,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
 import string
 import joblib
 import os
