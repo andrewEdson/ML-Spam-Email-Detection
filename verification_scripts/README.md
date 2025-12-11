@@ -19,7 +19,7 @@ We already included all dependencies in our requirements.txt file. The scripts u
 ### Activate Environment
 
 ```bash
-cd "/home/modeste/projects/finalReport_cpts 437/verification_scripts"
+cd "/verification_scripts"
 source ../ML-Spam-Email-Detection/venv/bin/activate  # Linux/Mac
 # OR
 ../ML-Spam-Email-Detection/venv/Scripts/activate  # Windows
